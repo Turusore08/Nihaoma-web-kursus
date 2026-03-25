@@ -1,0 +1,212 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background: #c0392b;
+    /* Warna Merah Mandarin */
+    color: #f1c40f;
+    /* Warna Emas */
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e67e22 3px solid;
+}
+
+header h1 {
+    float: left;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header ul {
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header a:hover {
+    color: #f1c40f;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background: #fff;
+    text-align: center;
+    padding: 60px 0;
+    border-bottom: #ddd 1px solid;
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: #c0392b;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #a93226;
+}
+
+/* Course Section */
+#courses {
+    padding: 40px 0;
+    background: #f9f9f9;
+}
+
+#courses h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.course-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.course-item {
+    background: #fff;
+    padding: 20px;
+    border: #ddd 1px solid;
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.course-item:hover {
+    border-color: #c0392b;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-item summary {
+    list-style: none;
+    /* Menghilangkan tanda panah default */
+    outline: none;
+}
+
+.course-item summary::-webkit-details-marker {
+    display: none;
+    /* Menghilangkan tanda panah default di Chrome/Safari */
+}
+
+.course-item h3 {
+    margin-bottom: 10px;
+    color: #c0392b;
+}
+
+.tap-hint {
+    display: block;
+    font-size: 12px;
+    color: #7f8c8d;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.course-detail {
+    text-align: left;
+    margin-top: 15px;
+    animation: fadeIn 0.5s ease;
+}
+
+.course-detail hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin-bottom: 15px;
+}
+
+.course-detail h4 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.course-detail ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.price {
+    background: #f1c40f;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: #c0392b;
+    font-size: 18px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* About & Contact */
+#about,
+#contact {
+    padding: 40px 0;
+    background: #fff;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #c0392b;
+    text-align: center;
+}
