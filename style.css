@@ -109,7 +109,21 @@ header a:hover {
     gap: 20px;
     align-items: flex-start;
 }
-
+section#mentor {
+    padding: 40px 0;
+    background: #fff;
+    text-align: center;
+}
+img.mentor-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+p.deskripsi-mentor {
+    font-size: 16px;
+    color: #555;
+}
 .course-item {
     background: #fff;
     padding: 20px;
