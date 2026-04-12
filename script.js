@@ -36,12 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // === 2. Regional Dropdowns (EMSifa API) ===
+
     const provinceSelect = document.getElementById('province');
     const citySelect = document.getElementById('city');
     const districtSelect = document.getElementById('district');
 
-    // Load Provinces
+
     fetch('https://www.emsifa.com/api-wilayah-indonesia/api/provinces.json')
         .then(res => res.json())
         .then(data => {
@@ -93,7 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // === 3. Postal Code Search (kodepos.now.sh API) ===
     const btnCariKodePos = document.getElementById('btnCariKodePos');
     const postalResult = document.getElementById('postalResult');
     const resKodePos = document.getElementById('resKodePos');
@@ -112,12 +111,10 @@ document.addEventListener('DOMContentLoaded', () => {
         btnCariKodePos.textContent = 'Mencari...';
         btnCariKodePos.disabled = true;
 
-        // Using districtText for search is safer as it's more specific
         fetch(`https://kodepos.now.sh/search?q=${districtText}`)
             .then(res => res.json())
             .then(data => {
                 if (data.data && data.data.length > 0) {
-                    // Filter by city to be more accurate if possible
                     const filtered = data.data.find(item => 
                         item.regency.toLowerCase().includes(cityText.toLowerCase().replace('KABUPATEN ', '').replace('KOTA ', ''))
                     ) || data.data[0];
@@ -143,7 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     });
 
-    // === 4. Form Submission ===
     const regForm = document.getElementById('regForm');
     regForm.addEventListener('submit', (e) => {
         e.preventDefault();
