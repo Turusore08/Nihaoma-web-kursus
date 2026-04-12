@@ -13,5 +13,31 @@
 - **Animasi**: Menambahkan `@keyframes fadeIn` untuk memberikan efek visual yang halus saat detail kursus dibuka melalui elemen `<details>`.
 - **Hover Effects**: Memberikan umpan balik visual pada navigasi dan tombol saat kursor diarahkan (hover), seperti perubahan warna dan ketebalan teks.
 
+### 3. JavaScript (Interaktivitas & Logika)
+- **DOMContentLoaded Event**: Script menunggu hingga DOM sepenuhnya dimuat sebelum menjalankan kode untuk memastikan semua elemen HTML tersedia.
+- **Name Autocomplete/Suggestions**: 
+  - Menggunakan array daftar nama pendaftar
+  - Fitur filtering real-time saat pengguna mengetik di input nama
+  - Menampilkan saran nama yang cocok secara dinamis
+  - Pengguna dapat memilih nama dari saran yang ditampilkan
+- **Regional Dropdowns (EMSifa API)**:
+  - Mengintegrasikan EMSifa Indonesia API (`https://www.emsifa.com/api-wilayah-indonesia/api/`) untuk data regional
+  - Dropdown Provinsi dimuat saat page load
+  - Dropdown Kabupaten/Kota memuat data berdasarkan provinsi yang dipilih
+  - Dropdown Kecamatan memuat data berdasarkan kota yang dipilih
+  - Menggunakan `fetch()` untuk menampilkan data dari API secara asinkron
+- **Postal Code Search**:
+  - Menggunakan kodepos.now.sh API untuk mencari kode pos berdasarkan kecamatan
+  - Tombol "Cari Kode Pos" mengambil nilai dari dropdown kota dan kecamatan yang dipilih
+  - Menampilkan hasil pencarian dengan detail lokasi (desa, kecamatan, kabupaten, provinsi)
+  - Notifikasi loading (tombol berubah menjadi "Mencari...") dan error handling
+- **Form Submission**:
+  - Mencegah default form submission dengan `e.preventDefault()`
+  - Mengumpulkan data form menggunakan `FormData` API
+  - Menampilkan pesan terima kasih ke pengguna
+  - Me-reset form setelah submit
+  - Menghapus hasil pencarian kode pos
+  - Mereset state dropdown (disabled) setelah submit
+
 ---
 

@@ -18,7 +18,8 @@
                     <li><a href="#courses">Kursus</a></li>
                     <li><a href="#about">Tentang Kami</a></li>
                     <li><a href="#contact">Kontak</a></li>
-                    <li><a href ="#mentor">Mentor</a></li>
+                    <li><a href="#mentor">Mentor</a></li>
+                    <li><a href="#registration">Pendaftaran</a></li>
                 </ul>
             </nav>
         </div>
@@ -121,6 +122,73 @@
                     telah membantu banyak siswa mencapai kemampuan bahasa Mandarin yang baik.</p>
             </div>
         </section>
+
+        <section id="registration">
+            <div class="container">
+                <h2>Formulir Pendaftaran</h2>
+                <p>Silakan isi formulir di bawah ini untuk mendaftar kursus kami.</p>
+                <div class="registration-container">
+                    <form id="regForm">
+                        <div class="form-group">
+                            <label for="nama">Nama Lengkap</label>
+                            <input type="text" id="nama" name="nama" placeholder="Masukkan nama..." autocomplete="off" required>
+                            <div id="nameSuggestions" class="suggestions"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="alamat">Alamat</label>
+                            <textarea id="alamat" name="alamat" placeholder="Masukkan alamat lengkap..." required></textarea>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Nomor HP</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Contoh: 08123456789" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                            </div>
+                        </div>
+
+                        <div class="postal-search-box">
+                            <h3>Pencarian Kode Pos</h3>
+                            <div class="form-group">
+                                <label for="province">Provinsi</label>
+                                <select id="province" required>
+                                    <option value="">Pilih Provinsi</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">Kabupaten / Kota</label>
+                                <select id="city" required disabled>
+                                    <option value="">Pilih Kabupaten/Kota</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="district">Kecamatan</label>
+                                <select id="district" required disabled>
+                                    <option value="">Pilih Kecamatan</option>
+                                </select>
+                            </div>
+                            <button type="button" id="btnCariKodePos" class="btn-secondary">Cari Kode Pos</button>
+                            
+                            <div id="postalResult" class="postal-result-container" style="display: none;">
+                                <div class="postal-card">
+                                    <p><strong>Kode Pos:</strong> <span id="resKodePos">-</span></p>
+                                    <p><strong>Informasi Daerah:</strong> <span id="resInfo">-</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="kodepos">Kode Pos Terpilih</label>
+                            <input type="text" id="kodepos" name="kodepos" placeholder="Akan terisi otomatis setelah pencarian" readonly required>
+                        </div>
+
+                        <button type="submit" class="btn">Daftar Sekarang</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -128,6 +196,7 @@
             <p>&copy; 2026 Nihaoma. Semua hak dilindungi.</p>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
